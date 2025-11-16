@@ -1,0 +1,3 @@
+[submodule "Assets/Nframework"]
+	path = Assets/Nframework
+	url = https://github.com/nghiaromvt/nframework

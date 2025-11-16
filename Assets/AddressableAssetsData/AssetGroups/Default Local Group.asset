@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 1db0aa8ee5bbc5844879402c4cbb9dcd
+  m_SerializeEntries:
+  - m_GUID: 8cfea3e7ef6c4ba4c9a93eafc2bec2d1
+    m_Address: Game
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 61263f38cc02aaa48b1eebe6dd5bba90
+    m_Address: DragonSkinDetailPopupUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b5feb10aeef14b9468ade9454f718c51
+    m_Address: DragonShopPopupUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9b49d7ae0c6203c469523d774c5c0d89
+    m_Address: HomeMenuUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 264f2a5f5d2399b48a03dad158bc4284
+    m_Address: ResultPopupUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 3c5c5d69ae9269445a7a0bee817751e3, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 51bfa710c744cbc49bc291a6d3f61a76, type: 2}
+    - {fileID: 11400000, guid: b028630d6d55f374cbda6bd981ee8406, type: 2}
