@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace PlaneRunner
+{
+    public class Coin : MonoBehaviour
+    {
+        private void Update()
+        {
+            transform.position += GameManager.I.GameSpeed * Time.deltaTime * Vector3.back;
+
+            if (transform.position.z < -50)
+                Destroy(gameObject);
+        }
+    }
+}

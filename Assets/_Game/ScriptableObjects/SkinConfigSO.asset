@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51dd1a43ab2afd04eba5451642ea5129, type: 3}
+  m_Name: SkinConfigSO
+  m_EditorClassIdentifier: 
+  _datas:
+  - Id: 1
+    CoinRequirement: 500
+    Material: {fileID: 0}
+    MaterialName: Red
+  - Id: 2
+    CoinRequirement: 500
+    Material: {fileID: 0}
+    MaterialName: Green
+  - Id: 3
+    CoinRequirement: 500
+    Material: {fileID: 0}
+    MaterialName: Blue
+  - Id: 4
+    CoinRequirement: 500
+    Material: {fileID: 0}
+    MaterialName: Black
+  - Id: 5
+    CoinRequirement: 500
+    Material: {fileID: 0}
+    MaterialName: White
+  _sheetId: 1OE-43mRmUdwn83G0-T8QxwVd4aE1nENtDUU1YOD2MzU
+  _isSheetIdEncrypted: 0
+  _gridId: 553420754
+  _tsvCachePath: 
+  _jsonCachePath: 

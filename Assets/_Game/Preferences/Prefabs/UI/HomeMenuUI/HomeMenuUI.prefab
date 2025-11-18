@@ -1197,6 +1197,7 @@ MonoBehaviour:
   _settingsBTN: {fileID: 3991399507536991652}
   _dragonBTN: {fileID: 3991399505819473423}
   _flyBTN: {fileID: 3991399506752942877}
+  _highScoreTMP: {fileID: 3991399507538485164}
 --- !u!1 &3991399507617661519
 GameObject:
   m_ObjectHideFlags: 0

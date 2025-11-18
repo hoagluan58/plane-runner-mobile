@@ -8,7 +8,8 @@ namespace PlaneRunner
     {
         public static class SceneName
         {
-            public const string GAME = "Game";
+            public const string MAIN = "Main";
+            public const string GAMEPLAY = "Gameplay";
         }
 
         public static class SaveKey

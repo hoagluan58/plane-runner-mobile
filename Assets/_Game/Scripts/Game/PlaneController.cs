@@ -9,10 +9,15 @@ namespace PlaneRunner
         [SerializeField] private Transform _base;
         [SerializeField] private Vector2 _turnSpeed = Vector2.zero;
         [SerializeField] private GameObject _explodeParticle;
+        [SerializeField] private GameObject _speedParticleGo;
 
         private bool _isUpdate = false;
 
-        public void EnableUpdate(bool isEnable) => _isUpdate = isEnable;
+        public void EnableUpdate(bool isEnable)
+        {
+            _isUpdate = isEnable;
+            _speedParticleGo.SetActive(isEnable);
+        }
 
         private void Update()
         {
@@ -58,6 +63,12 @@ namespace PlaneRunner
                 if (hit.gameObject == gameObject)
                     continue;
 
+                if (hit.CompareTag("Coin"))
+                {
+                    GameManager.I.OnCollectCoin();
+                    Destroy(hit.gameObject);
+                    continue;
+                }
 
                 if (_explodeParticle != null)
                 {

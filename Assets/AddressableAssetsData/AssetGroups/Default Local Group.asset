@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 1db0aa8ee5bbc5844879402c4cbb9dcd
   m_SerializeEntries:
   - m_GUID: 8cfea3e7ef6c4ba4c9a93eafc2bec2d1
-    m_Address: Game
+    m_Address: Main
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 61263f38cc02aaa48b1eebe6dd5bba90
@@ -35,6 +35,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 264f2a5f5d2399b48a03dad158bc4284
     m_Address: ResultPopupUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ad21f1f3b7e4f4c48a6831e2e44ba501
+    m_Address: Gameplay
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3c1db579c263fbf4ba6587a847fe9d1d
+    m_Address: GameplayPopupUI
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

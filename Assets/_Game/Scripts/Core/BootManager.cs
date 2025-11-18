@@ -21,12 +21,12 @@ namespace PlaneRunner
             RegisterSaveData();
 
             await AddressablesManager.Initialize();
-            await SceneLoader.LoadAddressables(Define.SceneName.GAME, true, true);
+            await SceneLoader.LoadAddressables(Define.SceneName.MAIN, true, true);
         }
 
         private void RegisterSaveData()
         {
-            GameData.RegisterSaveable(new UserSaveData());
+            GameData.RegisterSaveable(UserSaveData.I);
             LocalSaveManager.Load();
         }
     }

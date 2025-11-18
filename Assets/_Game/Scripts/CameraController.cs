@@ -5,54 +5,53 @@ namespace PlaneRunner
 {
     public class CameraController : SingletonMono<CameraController>
     {
-        private Vector3 m_InitPosition;
-
-        private float m_ShakeTimer;
-        private float m_ShakeArc;
-        private float m_ShakeRadius = 1;
+        private float _shakeTimer;
+        private float _shakeRadius = 1;
         [HideInInspector]
-        public bool m_ShakeEnabled = true;
+        public bool _shakeEnabled = true;
 
-        private Vector3 m_LerpedPosition;
-        private Quaternion m_LerpedRotation;
-        [HideInInspector]
-        public float m_CameraMoveLerp = 0;
-        [HideInInspector]
-        public int m_CameraMod = 0;
-        Vector3 m_CamOffset = Vector3.zero;
+        private Vector3 _lerpedPosition;
+        private Quaternion _lerpedRotation;
+        Vector3 _camOffset = Vector3.zero;
+        private Camera _camera;
+        private bool _isUpdate = false;
 
-        float startZ;
+        public void EnableUpdate(bool isEnable) => _isUpdate = isEnable;
 
-        void Start()
+        private void Start()
         {
-            m_LerpedPosition = transform.position;
-            m_LerpedRotation = transform.rotation;
+            _lerpedPosition = transform.position;
+            _lerpedRotation = transform.rotation;
 
-            m_ShakeEnabled = true;
+            _shakeEnabled = true;
         }
 
-        void Update()
+        private void Update()
         {
-            m_ShakeTimer -= Time.deltaTime;
-            //ShakeArc += 100 * Time.deltaTime;
+            if (!_isUpdate)
+            {
+                return;
+            }
 
-            if (m_ShakeTimer <= 0)
-                m_ShakeTimer = 0;
+            _shakeTimer -= Time.deltaTime;
+            if (_shakeTimer <= 0)
+                _shakeTimer = 0;
         }
 
-        // Update is called once per frame
-        void LateUpdate()
+        private void LateUpdate()
         {
+            if (!_isUpdate) return;
+
             Vector3 finalPosition = Vector3.zero;
             Quaternion finalRotation = Quaternion.identity;
 
             Vector3 ShakeOffset = Vector3.zero;
-            float shakeSin = Mathf.Cos(30 * Time.time) * Mathf.Clamp(m_ShakeTimer, 0, 0.5f);
-            float shakeCos = Mathf.Sin(50 * Time.time) * Mathf.Clamp(m_ShakeTimer, 0, 0.5f);
-            ShakeOffset = new Vector3(m_ShakeRadius * shakeCos, 0, m_ShakeRadius * shakeSin);
+            float shakeSin = Mathf.Cos(30 * Time.time) * Mathf.Clamp(_shakeTimer, 0, 0.5f);
+            float shakeCos = Mathf.Sin(50 * Time.time) * Mathf.Clamp(_shakeTimer, 0, 0.5f);
+            ShakeOffset = new Vector3(_shakeRadius * shakeCos, 0, _shakeRadius * shakeSin);
 
             Vector3 speedShake = new Vector3(0.2f * Mathf.Cos(10 * Time.time), 0.1f * Mathf.Sin(16 * Time.time), 0);
-            if (!m_ShakeEnabled)
+            if (!_shakeEnabled)
             {
                 speedShake = Vector3.zero;
             }
@@ -64,10 +63,10 @@ namespace PlaneRunner
 
         public void StartShake(float t, float r)
         {
-            if (m_ShakeTimer == 0 || m_ShakeRadius < r)
-                m_ShakeRadius = r;
+            if (_shakeTimer == 0 || _shakeRadius < r)
+                _shakeRadius = r;
 
-            m_ShakeTimer = t;
+            _shakeTimer = t;
         }
 
         public Ray GetRay(Vector3 screenPosition)
@@ -94,7 +93,5 @@ namespace PlaneRunner
 
             return point;
         }
-
-
     }
 }

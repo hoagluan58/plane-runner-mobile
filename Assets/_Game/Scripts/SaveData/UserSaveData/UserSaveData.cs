@@ -1,36 +1,65 @@
 using NFramework;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace PlaneRunner
 {
-    public class UserSaveData : ISaveable
+    public class UserSaveData : SingletonMono<UserSaveData>, ISaveable
     {
+        public static event Action OnCoinChanged;
+
+        [SerializeField] private SaveData _saveData;
+
         public int Coin
         {
-            get => _coin;
+            get => _saveData.Coin;
             set
             {
-                _coin = value;
+                _saveData.Coin = value;
+                OnCoinChanged?.Invoke();
                 DataChanged = true;
             }
         }
 
         public int HighScore
         {
-            get => _highScore;
+            get => _saveData.HighScore;
             set
             {
-                _highScore = value;
+                _saveData.HighScore = value;
                 DataChanged = true;
             }
         }
 
-        private UserSaveData _saveData;
-        private int _coin;
-        private int _highScore;
+        public int EvolutionLevel
+        {
+            get => _saveData.EvolutionLevel;
+            set
+            {
+                _saveData.EvolutionLevel = value;
+                DataChanged = true;
+            }
+        }
+
+        public List<string> UnlockedSkins => _saveData.UnlockedSkins;
+
+        public void AddUnlockedSkin(string skinName)
+        {
+            _saveData.UnlockedSkins.Add(skinName);
+            DataChanged = true;
+        }
 
         #region ISaveable
 
+        [System.Serializable]
+        public class SaveData
+        {
+            public int Coin = 0;
+            public int HighScore = 0;
+            public int EvolutionLevel = 1;
+            public List<string> UnlockedSkins = new List<string>();
+        }
         public string SaveKey => Define.SaveKey.UserSaveData;
 
         public bool DataChanged { get; set; }
@@ -48,14 +77,12 @@ namespace PlaneRunner
         {
             if (string.IsNullOrEmpty(data))
             {
-                _saveData = new UserSaveData();
+                _saveData = new SaveData();
                 DataChanged = true;
-                Debug.Log("New");
             }
             else
             {
-                _saveData = JsonUtility.FromJson<UserSaveData>(data);
-                Debug.Log(_saveData.Coin);
+                _saveData = JsonUtility.FromJson<SaveData>(data);
             }
         }
         #endregion

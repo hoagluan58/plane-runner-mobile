@@ -3,6 +3,7 @@ using NFramework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ namespace PlaneRunner
         [SerializeField] private Button _settingsBTN;
         [SerializeField] private Button _dragonBTN;
         [SerializeField] private Button _flyBTN;
+        [SerializeField] private TextMeshProUGUI _highScoreTMP;
 
         private void Awake()
         {
@@ -35,6 +37,17 @@ namespace PlaneRunner
         private void OnSettingsButtonClick()
         {
 
+        }
+
+        public override void OnOpen(UIInputData inputData)
+        {
+            base.OnOpen(inputData);
+            UpdateScore();
+        }
+
+        private void UpdateScore()
+        {
+            _highScoreTMP.SetText(GameData.GetSaveable<UserSaveData>(Define.SaveKey.UserSaveData).HighScore.ToString());
         }
     }
 }
