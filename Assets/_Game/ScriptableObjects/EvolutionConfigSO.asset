@@ -16,12 +16,15 @@ MonoBehaviour:
   - Level: 1
     CoinRequirement: 0
     ScoreMultiplier: 1
+    DragonPrefab: {fileID: 1609484837924574350, guid: 1354c67b1305acb498b7cb957d3dedb6, type: 3}
   - Level: 2
     CoinRequirement: 500
     ScoreMultiplier: 3
+    DragonPrefab: {fileID: 7480163929562415133, guid: 5c999430722da704b9ec9bcabc10887b, type: 3}
   - Level: 3
     CoinRequirement: 5000
     ScoreMultiplier: 7
+    DragonPrefab: {fileID: 4154418115804261172, guid: 082d5507b599d1d45bd2a6a29155532a, type: 3}
   _sheetId: 1OE-43mRmUdwn83G0-T8QxwVd4aE1nENtDUU1YOD2MzU
   _isSheetIdEncrypted: 0
   _gridId: 685851596

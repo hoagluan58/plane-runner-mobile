@@ -16,23 +16,31 @@ MonoBehaviour:
   - Id: 1
     CoinRequirement: 500
     Material: {fileID: 0}
-    MaterialName: Red
+    MaterialName: skin_1
   - Id: 2
     CoinRequirement: 500
     Material: {fileID: 0}
-    MaterialName: Green
+    MaterialName: skin_2
   - Id: 3
     CoinRequirement: 500
     Material: {fileID: 0}
-    MaterialName: Blue
+    MaterialName: skin_3
   - Id: 4
     CoinRequirement: 500
     Material: {fileID: 0}
-    MaterialName: Black
+    MaterialName: skin_4
   - Id: 5
     CoinRequirement: 500
     Material: {fileID: 0}
-    MaterialName: White
+    MaterialName: skin_5
+  - Id: 6
+    CoinRequirement: 500
+    Material: {fileID: 0}
+    MaterialName: skin_6
+  - Id: 7
+    CoinRequirement: 500
+    Material: {fileID: 0}
+    MaterialName: skin_7
   _sheetId: 1OE-43mRmUdwn83G0-T8QxwVd4aE1nENtDUU1YOD2MzU
   _isSheetIdEncrypted: 0
   _gridId: 553420754

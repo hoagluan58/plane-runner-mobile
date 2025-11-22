@@ -49,6 +49,10 @@ MonoBehaviour:
     m_Address: Sound
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 4e9c57bb3c4baad4e9683048cdf62fba
+    m_Address: SettingsPopupUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 3c5c5d69ae9269445a7a0bee817751e3, type: 2}
   m_SchemaSet:

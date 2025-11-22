@@ -1,5 +1,6 @@
 using NFramework;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace PlaneRunner
 {
@@ -16,5 +17,6 @@ namespace PlaneRunner
         public int Level;
         public int CoinRequirement;
         public int ScoreMultiplier;
+        public GameObject DragonPrefab;
     }
 }

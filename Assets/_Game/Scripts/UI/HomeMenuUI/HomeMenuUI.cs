@@ -36,7 +36,7 @@ namespace PlaneRunner
 
         private void OnSettingsButtonClick()
         {
-
+            UIManager.OpenAddressables(UIDefine.SETTINGS_POPUP_UI).Forget();
         }
 
         public override void OnOpen(UIInputData inputData)

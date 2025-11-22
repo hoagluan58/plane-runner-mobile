@@ -313,6 +313,7 @@ MonoBehaviour:
   _uiLayer: 2
   _pauseGameStatus: 0
   _currentScoreTMP: {fileID: 7702747041220449512}
+  _settingsBTN: {fileID: 7702747042534429348}
 --- !u!1001 &7702747041254573455
 PrefabInstance:
   m_ObjectHideFlags: 0

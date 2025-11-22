@@ -29,6 +29,8 @@ namespace PlaneRunner
         private void RegisterSaveData()
         {
             GameData.RegisterSaveable(UserSaveData.I);
+            GameData.RegisterSaveable(SoundManager.I);
+            GameData.RegisterSaveable(VibrationManager.I);
             LocalSaveManager.Load();
         }
     }

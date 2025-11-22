@@ -9684,6 +9684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8261959945119862409}
   - component: {fileID: 6437779132317906864}
+  - component: {fileID: 4734614777672267179}
   - component: {fileID: 8261959945119862411}
   m_Layer: 0
   m_Name: PlaneController
@@ -9726,6 +9727,19 @@ MonoBehaviour:
   _turnSpeed: {x: 0, y: 0}
   _explodeParticle: {fileID: 2302704012981483216, guid: f9e49c19e36969b4c90fb49a262b4e28, type: 3}
   _speedParticleGo: {fileID: 0}
+--- !u!114 &4734614777672267179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8261959945119862408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5bcfe3639162842bd16841ff428f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _container: {fileID: 3488881048687673621}
 --- !u!135 &8261959945119862411
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9834,6 +9848,26 @@ PrefabInstance:
     - target: {fileID: 1609484837924574350, guid: 1354c67b1305acb498b7cb957d3dedb6, type: 3}
       propertyPath: m_Name
       value: Dragon_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609484837924574350, guid: 1354c67b1305acb498b7cb957d3dedb6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277509431926391053, guid: 1354c67b1305acb498b7cb957d3dedb6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.53921795
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277509431926391053, guid: 1354c67b1305acb498b7cb957d3dedb6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.6575932
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277509431926391053, guid: 1354c67b1305acb498b7cb957d3dedb6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.3710389
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277509431926391053, guid: 1354c67b1305acb498b7cb957d3dedb6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.37302208
       objectReference: {fileID: 0}
     - target: {fileID: 5377638109204494690, guid: 1354c67b1305acb498b7cb957d3dedb6, type: 3}
       propertyPath: m_RootOrder
