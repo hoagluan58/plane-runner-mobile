@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414738, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.18340573, g: 0.22900319, b: 0.30602437, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -232,6 +232,8 @@ MonoBehaviour:
   _saveData:
     Coin: 0
     HighScore: 0
+    EvolutionLevel: 1
+    UnlockedSkins: []
 --- !u!1 &951040078
 GameObject:
   m_ObjectHideFlags: 0

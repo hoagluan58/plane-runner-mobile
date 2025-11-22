@@ -12,6 +12,7 @@ namespace PlaneRunner
 
         public List<SkinConfigData> GetConfigs() => _datas;
 
+#if UNITY_EDITOR
         protected override void OnSynced(List<SkinConfigData> googleSheetData)
         {
             base.OnSynced(googleSheetData);
@@ -21,6 +22,7 @@ namespace PlaneRunner
                 data.Material = FileHelper.LoadFirstAssetWithName<Material>(data.MaterialName);
             }
         }
+#endif
     }
 
     [System.Serializable]

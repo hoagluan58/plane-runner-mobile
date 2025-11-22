@@ -45,6 +45,10 @@ MonoBehaviour:
     m_Address: GameplayPopupUI
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 104b8f2350f54494eb88cf5c17f904ff
+    m_Address: Sound
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 3c5c5d69ae9269445a7a0bee817751e3, type: 2}
   m_SchemaSet:

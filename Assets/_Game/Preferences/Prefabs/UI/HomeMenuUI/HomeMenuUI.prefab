@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 3991399507536991654}
   - component: {fileID: 3991399507536991655}
   - component: {fileID: 3991399507536991652}
+  - component: {fileID: 432669487038044113}
   m_Layer: 5
   m_Name: SettingsBTN
   m_TagString: Untagged
@@ -349,6 +350,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &432669487038044113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3991399507536991674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b137d57fc82c58c47b94a1a80738877c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3991399507538485154
 GameObject:
   m_ObjectHideFlags: 0

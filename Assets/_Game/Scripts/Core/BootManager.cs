@@ -21,6 +21,8 @@ namespace PlaneRunner
             RegisterSaveData();
 
             await AddressablesManager.Initialize();
+            await SoundManager.Initialize();
+            await SoundManager.CacheSoundGroupAddressables(SoundDefine.SoundGroupKey.SOUND);
             await SceneLoader.LoadAddressables(Define.SceneName.MAIN, true, true);
         }
 

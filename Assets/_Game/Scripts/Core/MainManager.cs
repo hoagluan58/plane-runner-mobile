@@ -1,7 +1,5 @@
-using NFramework;
-using System.Collections;
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using NFramework;
 using UnityEngine;
 
 namespace PlaneRunner
@@ -11,6 +9,7 @@ namespace PlaneRunner
         private void Start()
         {
             UIManager.OpenAddressables(UIDefine.HOME_MENU_UI).Forget();
+            SoundManager.PlayBgm(SoundDefine.SoundEntryKey.BGM);
         }
     }
 }
